@@ -8,9 +8,8 @@ app.get('/', (req, res) => {
 
 app.get('/load', (req, res) => {
     // simulate a load on cpu
-    const start = Date.now();
-    while (Date.now() - start < 80000); // Simulate CPU load for 80 seconds
-    res.send('CPU load simulation complete');
+    for(let i = 0; i < 100000; i++) {}
+    res.send('Load completed');
 })
 
 app.listen(3000, () => {
